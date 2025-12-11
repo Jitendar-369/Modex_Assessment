@@ -16,11 +16,11 @@ services:
       - key: JWT_SECRET
         generateValue: true
 
-databases:
   # Database
-  - name: modex-booking-db
+  - type: psql
+    name: modex-booking-db
+    plan: free
     databaseName: modex_db
     user: modex_user
-    plan: free
 
 version: "1"
