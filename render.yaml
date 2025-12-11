@@ -4,8 +4,8 @@ services:
     name: modex-booking-backend
     env: node
     plan: free
-    buildCommand: ls -la && cd backend && npm install && npm run build
-    startCommand: cd backend && npm start
+    buildCommand: ls -la && cd modex-booking/backend && npm install && npm run build
+    startCommand: cd modex-booking/backend && npm start
     envVars:
       - key: NODE_ENV
         value: production
