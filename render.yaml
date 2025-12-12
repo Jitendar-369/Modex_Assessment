@@ -4,8 +4,8 @@ services:
     name: modex-booking-backend
     env: node
     plan: free
-    buildCommand: cd backend && npm install && npm run build
-    startCommand: cd backend && npm start
+    buildCommand: cd modex-booking/backend && npm install --include=dev && npm run build
+    startCommand: cd modex-booking/backend && npm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -16,11 +16,11 @@ services:
       - key: JWT_SECRET
         generateValue: true
 
+databases:
   # Database
-  - type: psql
-    name: modex-booking-db
-    plan: free
+  - name: modex-booking-db
     databaseName: modex_db
     user: modex_user
+    plan: free
 
 version: "1"
